@@ -1,0 +1,138 @@
+@import "_variabels.module.scss";
+@import "_mixins.module.scss";
+@import "_footer.module.scss";
+@import "_navBar.module.scss";
+
+.main_container {
+
+  .main_section {
+    height: 100%;
+    width: 100%;
+
+    .home_container {
+      height: 100vh;
+      width: 100%;
+      background-image: url("../public/images/hero-bg2.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: relative;
+
+      .home_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        background: linear-gradient( to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100% );
+      }
+
+      .home_content {
+        height: 100%;
+        width: 90%;
+        margin: auto;
+        border: solid white 1px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+        justify-content: center;
+        color: $color-white;
+
+        .top_section {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .left_content {
+            display: flex;
+            flex-direction: column;
+            
+            .greeting {
+              display: flex;
+              column-gap: 1rem;
+              align-items: center;
+
+              span {
+                font-size: 1.2rem;
+                font-weight: bolder;
+                color: $color-primary;
+              }
+
+              .line {
+              height: 1.5px;
+              width: 50px;
+              color: $color-primary;
+              background-color: $color-primary;
+              }
+            }
+
+            h1 {
+              margin: 0;
+              font-size: 3.5rem;
+              color: $color-white;
+            }
+
+            span {
+              font-size: 3.5rem;
+              color: $color-white;
+              font-weight: 700;
+            }
+          }
+          .right_content {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+
+            button {
+              height: 60px;
+              width: 200px;
+              font-size: 0.9rem;
+              font-weight: 600;
+              background-color: transparent;
+              color: $color-white;
+              border: solid $color-white 2px;
+            }
+
+            button:hover {
+              background-color: $color-white;
+              color: $color-black;
+            }
+          }
+        }
+      }
+    }
+
+    .about_container {
+      height: 100vh;
+      width: 100%;
+      background-color: $color-white;
+    }
+
+    .work_container {
+      min-height: 100vh;
+      width: 100%;
+      background-color: $color-quaternary;
+    }
+
+    .contact_container {
+      height: 100vh;
+      width: 100%;
+      background-image: url("../public/images/contact-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+
+      .contact_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        background:linear-gradient( to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100% );
+      }
+    }
+  }
+}
