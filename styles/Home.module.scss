@@ -29,10 +29,10 @@
       }
 
       .home_content {
+        padding-top: 10rem;
         height: 100%;
         width: 90%;
         margin: auto;
-        border: solid white 1px;
         display: flex;
         flex-direction: column;
         row-gap: 5rem;
@@ -54,6 +54,7 @@
               align-items: center;
 
               span {
+                letter-spacing: 3.5px;
                 font-size: 1.2rem;
                 font-weight: bolder;
                 color: $color-primary;
@@ -100,8 +101,24 @@
             }
           }
           
-          .bottom_section {
-            
+        }
+
+        .bottom_section {
+          width: 85%;
+          margin: 0 auto;
+
+          span {
+            display: flex;
+            align-items: center;
+            column-gap: 0.8rem;
+            color: $color-white;
+            font-size: 0.7rem;
+            letter-spacing: 2.5px;
+
+            svg {
+              color: $color-primary;
+              font-size: 1.5rem;
+            }
           }
         }
       }

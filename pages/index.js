@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import { ChevronDown } from "tabler-icons-react";
 
 export default function Home() {
   return (
@@ -23,8 +24,8 @@ export default function Home() {
                   <div className={styles.line}></div>
                   <span>HELLO THERE</span>
                 </div>
-                <h1>I AM AHMED J. JIBRIL</h1>
-                <span>I AM A Frontend Developer</span>
+                <h1>I am Ahmed J. Jibril</h1>
+                <span>I am a Frontend Developer</span>
               </div>
               <div className={styles.right_content}>
                 <Link href={"/about_container"}>
@@ -35,7 +36,11 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className={styles.bottom_section}>bottom</div>
+            <div className={styles.bottom_section}>
+              <span>
+                SCROLL DOWN <ChevronDown />
+              </span>
+            </div>
           </div>
         </section>
         <section className={styles.about_container}>About</section>

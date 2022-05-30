@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/Home.module.scss";
 
 function Navbar() {
-  return <div>navbar</div>;
+  return <div className={styles.navbar_container}>navbar</div>;
 }
 
 export default Navbar;
