@@ -43,7 +43,50 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={styles.about_container}>About</section>
+        <section className={styles.about_container}>
+          <div className={styles.about_content}>
+            <div className={styles.top_section}>
+              <span>ABOUT</span>
+              <h2>Personal Info.</h2>
+              <h3>Get to know more about me</h3>
+              <div className={styles.about_underline}></div>
+            </div>
+            <div className={styles.bottom_section}>
+              <div className={styles.left_content}>
+                <h4>Hello!</h4>
+                <p>
+                  My name is Ahmed Jamal Jibril and I'm a passionate Frontend
+                  Developer using web technologies to build amazing products and
+                  focusing on solving problems for different niches and
+                  different industries using the power of technology. Would love
+                  to hear from you. Whether it's a project, job opportunity, or
+                  just a chat. Feel free to contact me!
+                </p>
+              </div>
+              <div className={styles.right_content}>
+                <h4>Skills</h4>
+                <div className={styles.skills_content}>
+                  <div className={styles.skills_item}>HTML</div>
+                  <div className={styles.skills_item}>CSS</div>
+                  <div className={styles.skills_item}>JAVASCRIPT</div>
+                  <div className={styles.skills_item}>TYPESCRIPT</div>
+                  <div className={styles.skills_item}>REACT</div>
+                  <div className={styles.skills_item}>NEXT.JS</div>
+                  <div className={styles.skills_item}>SASS</div>
+                  <div className={styles.skills_item}>RESPONSIVE DESIGN</div>
+                  <div className={styles.skills_item}>ADOBE XD</div>
+                  <div className={styles.skills_item}>FIGMA</div>
+                  <div className={styles.skills_item}>BOOTSTRAP</div>
+                  <div className={styles.skills_item}>GITHUB</div>
+                  <div className={styles.skills_item}>NETLIFY</div>
+                  <div className={styles.skills_item}>STRAPI</div>
+                  <div className={styles.skills_item}>HEROKU</div>
+                  <div className={styles.skills_item}>WORDPRESS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className={styles.work_container}>Work</section>
         <section className={styles.contact_container}>
           <div className={styles.contact_overlay}></div>
