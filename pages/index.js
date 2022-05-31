@@ -55,11 +55,11 @@ export default function Home() {
               <div className={styles.left_content}>
                 <h4>Hello!</h4>
                 <p>
-                  My name is Ahmed Jamal Jibril and I'm a passionate Frontend
+                  My name is Ahmed Jamal Jibril and I´m a passionate Frontend
                   Developer using web technologies to build amazing products and
                   focusing on solving problems for different niches and
                   different industries using the power of technology. Would love
-                  to hear from you. Whether it's a project, job opportunity, or
+                  to hear from you. Whether it´s a project, job opportunity, or
                   just a chat. Feel free to contact me!
                 </p>
               </div>
@@ -87,9 +87,163 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={styles.work_container}>Work</section>
+        <section className={styles.work_container}>
+          <div className={styles.work_content}>
+            <div className={styles.top_section}>
+              <span>WORK</span>
+              <h2>Latest Projects.</h2>
+              <h3>
+                Here you can find some of the projects that i have created
+                recently
+              </h3>
+              <div className={styles.work_underline}></div>
+            </div>
+            <div className={styles.bottom_section}>
+              <div className={styles.project_container}>
+                <div className={styles.project_image}>
+                  <Link href={"https://makers-studio.netlify.app/"}>
+                    <Image
+                      src={"/../public/images/makers-studio.JPG"}
+                      alt={""}
+                      layout={"responsive"}
+                      height={176}
+                      width={300}
+                    />
+                  </Link>
+                </div>
+                <div className={styles.project_info}>
+                  <h4>Maker´s studio</h4>
+                  <p>
+                    Makers Studio is an e-commerce site where you can buy or
+                    sell your own artwork on.
+                  </p>
+                  <div className={styles.skills_content}>
+                    <div className={styles.skills_item}>HTML</div>
+                    <div className={styles.skills_item}>CSS</div>
+                    <div className={styles.skills_item}>JAVASCRIPT</div>
+                    <div className={styles.skills_item}>FIGMA</div>
+                    <div className={styles.skills_item}>ADOBE XD</div>
+                    <div className={styles.skills_item}>BOOTSTRAP</div>
+                    <div className={styles.skills_item}>NETLIFY</div>
+                    <div className={styles.skills_item}>STRAPI</div>
+                    <div className={styles.skills_item}>HEROKU</div>
+                  </div>
+                  <div className={styles.project_buttons}>
+                    <Link href={""}>
+                      <button>DESIGN</button>
+                    </Link>
+                    <Link href={"https://makers-studio.netlify.app/"}>
+                      <button>LIVE SITE</button>
+                    </Link>
+                    <Link href={"https://github.com/Zeken0/Makers-Studio"}>
+                      <button>CODE</button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.project_container}>
+                <div className={styles.project_image}>
+                  <Link href={"https://makers-studio.netlify.app/"}>
+                    <Image
+                      src={"/../public/images/highart.JPG"}
+                      alt={""}
+                      layout={"responsive"}
+                      height={176}
+                      width={300}
+                    />
+                  </Link>
+                </div>
+                <div className={styles.project_info}>
+                  <h4>High Art</h4>
+                  <p>
+                    High Art is a blog site about the most influential music
+                    albums of the 21st century.
+                  </p>
+                  <div className={styles.skills_content}>
+                    <div className={styles.skills_item}>HTML</div>
+                    <div className={styles.skills_item}>CSS</div>
+                    <div className={styles.skills_item}>JAVASCRIPT</div>
+                    <div className={styles.skills_item}>FIGMA</div>
+                    <div className={styles.skills_item}>ADOBE XD</div>
+                    <div className={styles.skills_item}>JQUERY</div>
+                    <div className={styles.skills_item}>NETLIFY</div>
+                    <div className={styles.skills_item}>STRAPI</div>
+                    <div className={styles.skills_item}>HEROKU</div>
+                  </div>
+                  <div className={styles.project_buttons}>
+                    <Link
+                      href={
+                        "https://xd.adobe.com/view/5bfb59d4-f438-46ee-997d-5722c7aa7068-0ea8/"
+                      }
+                    >
+                      <button>DESIGN</button>
+                    </Link>
+                    <Link href={"https://high-art.netlify.app/"}>
+                      <button>LIVE SITE</button>
+                    </Link>
+                    <Link href={"https://github.com/Zeken0/HighArt"}>
+                      <button>CODE</button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.project_container}>
+                <div className={styles.project_image}>
+                  <Link href={"https://makers-studio.netlify.app/"}>
+                    <Image
+                      src={"/../public/images/tism2.JPG"}
+                      alt={""}
+                      layout={"responsive"}
+                      height={176}
+                      width={300}
+                    />
+                  </Link>
+                </div>
+                <div className={styles.project_info}>
+                  <h4>The Interactive Science Museum</h4>
+                  <p>
+                    The Interactive Science Museum is a informative museum site
+                    with a mission to make science accessible to all.
+                  </p>
+                  <div className={styles.skills_content}>
+                    <div className={styles.skills_item}>HTML</div>
+                    <div className={styles.skills_item}>CSS</div>
+                    <div className={styles.skills_item}>JAVASCRIPT</div>
+                    <div className={styles.skills_item}>FIGMA</div>
+                    <div className={styles.skills_item}>ADOBE XD</div>
+                    <div className={styles.skills_item}>NETLIFY</div>
+                  </div>
+                  <div className={styles.project_buttons}>
+                    <Link
+                      href={
+                        "https://xd.adobe.com/view/39045b06-2d8b-4833-9c3f-f265b6476211-6c57/screen/044d0ef7-5786-4b32-bdc5-16896607b15a/"
+                      }
+                    >
+                      <button>DESIGN</button>
+                    </Link>
+                    <Link
+                      href={
+                        "https://the-interactive-science-museum.netlify.app/"
+                      }
+                    >
+                      <button>LIVE SITE</button>
+                    </Link>
+                    <Link
+                      href={
+                        "https://github.com/Zeken0/The-Interactive-Science-Museum"
+                      }
+                    >
+                      <button>CODE</button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className={styles.contact_container}>
           <div className={styles.contact_overlay}></div>
+          <div className={styles.contact_content}></div>
         </section>
       </main>
       <Footer />
