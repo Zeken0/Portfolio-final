@@ -43,6 +43,7 @@
           display: flex;
           align-items: center;
           justify-content: space-evenly;
+          column-gap: 3rem;
 
           .left_content {
             display: flex;
@@ -86,13 +87,18 @@
             row-gap: 1.5rem;
 
             button {
-              height: 60px;
-              width: 200px;
+              font-family: $font-body;
+              height: 65px;
+              width: 230px;
               font-size: 0.9rem;
               font-weight: 600;
               background-color: transparent;
               color: $color-white;
               border: solid $color-white 2px;
+              transition: 0.35s;
+              border-radius: 2px;
+              cursor: pointer;
+              
             }
 
             button:hover {
@@ -374,7 +380,7 @@
     }
 
     .contact_container {
-      height: 100vh;
+      height: 150vh;
       width: 100%;
       background-image: url("../public/images/contact-bg.jpg");
       background-repeat: no-repeat;
@@ -392,7 +398,127 @@
         background:linear-gradient( to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100% );
       }
 
-      
+      .contact_content {
+        height: 100%;
+        width: 90%;
+        padding: 4rem 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+
+        .top_section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 1rem;
+
+          span {
+            font-size: 1.2rem;
+            font-weight: bolder;
+            color: $color-primary;
+          }
+
+          h2 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 800;
+            color: $color-white;
+          }
+
+          h3 {
+            margin: 0;
+            margin-top: 0.1rem;
+            color: $color-senary;
+          }
+        }
+
+        .bottom_section {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          column-gap: 3rem;
+          width: 65%;
+          height: 100%;
+          margin: auto;
+          color: $color-white;
+
+          .left_content {
+            height: 100%;
+            width: 100%;
+
+            form {
+              display: flex;
+              flex-direction: column;
+
+                .text_danger {
+                  margin-top: 0.5rem;
+                  color: red;
+                }
+
+                input, textarea {
+                  font-family: $font-skills;
+                  width: 100%;
+                  height: 30px;
+                  font-size: 1rem;
+                  font-weight: 400;
+                  padding: 2rem 0;
+                  border: none;
+                  outline: none;
+                  color: $color-white;
+                  letter-spacing: 1px;
+                  background-color: transparent;
+                  border-bottom: solid 2px #333333;
+                }
+
+                input:focus, textarea:focus {
+                  border-bottom: solid 1px $color-white;
+                }
+
+                textarea {
+                  height: 250px;
+                  width: 100%;
+                }
+
+                button {
+                  margin-top: 3rem;
+                  background-color: transparent;
+                  border: solid 2.5px $color-secondary;
+                  height: 3.5rem;
+                  color: $color-secondary;
+                  cursor: pointer;
+                  font-size: 1.2rem;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  border-radius: 2px;
+                  letter-spacing: 1px;
+                }
+
+                button:hover {
+                  background-color: $color-secondary;
+                  color: $color-white;
+                  transition: 0.4s;
+                }
+            }
+          }
+
+          .right_content {
+            height: 100%;
+            width: 50%;
+
+            h5 {
+              color: $color-white;
+              font-size: 0.9rem;
+              letter-spacing: 1px;
+            }
+
+            p {
+              color: $color-quinary;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
     }
   }
 }

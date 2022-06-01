@@ -1,0 +1,30 @@
+//* Fonts *//
+$font-body:  'Montserrat', sans-serif;
+$font-paragraph: "librebaskerville-regular", serif;
+$font-skills: 'Source Sans Pro', sans-serif;
+
+//* COLORS *//
+$color-primary: #c83cb9;
+$color-secondary: #9A2CA0;
+$color-tertiary: #f5f5f5;
+$color-quaternary: #f1f1f1;
+$color-quinary: #858686;
+$color-senary: #6c6c6c;
+$color-p:#5f5f5f;
+$color-white: #fff;
+$color-black: #080707;
+
+$c-action: var($color-secondary);
+$c-danger: rgb(190, 47, 47);
+$c-success: var($color-primary);
+$c-info: var($color-tertiary);
+$c-skills-bg: var($color-tertiary);
+$c-paragraphs: var($color-tertiary);
+$c-text--inverse: var($color-white);
+$c-disabled: var($color-quaternary);
+
+//* Z-index *//
+$z-base: 300;
+$z-ground: 400;
+$z-cieling: 1000;
+$z-sky: 9999;
