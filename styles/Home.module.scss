@@ -522,3 +522,64 @@
     }
   }
 }
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 1112px) {
+
+  .home_content {
+    row-gap: 5rem !important;
+    
+    .top_section {
+      width: 90%;
+      margin: 0rem auto;
+      row-gap: 3rem;
+      flex-direction: column;
+
+      .right_content {
+        flex-direction: row !important;
+        column-gap: 2rem;
+      }
+    }
+
+    .bottom_section {
+      margin: unset;
+    }
+  }
+
+  .about_content {
+
+    .bottom_section {
+      flex-direction: column;
+      row-gap: 5rem;
+    }
+  }
+
+  .work_content {
+
+    .bottom_section {
+      
+      .project_container {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .contact_container {
+    height: fit-content !important;
+
+    .contact_content {
+      
+      .bottom_section {
+        flex-direction: column;
+        row-gap: 4rem;
+  
+        .right_content {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 767px) {}

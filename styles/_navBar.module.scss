@@ -1,8 +1,161 @@
 .navbar_container {
-    position: sticky;
-    padding: 0 2.5rem;
+    z-index: 100;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: transparent;
+    color: $color-white;
+    transition: 0.4s;
+
+    .navbar_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+
+        img {
+            cursor: pointer;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .navbar_menu {
+
+            ul {
+                display: flex;
+                column-gap: 1.2rem;
+                list-style: none;
+
+                li {
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .navbar_menu_mobile {
+
+            ul {
+                display: flex;
+                column-gap: 1.2rem;
+                list-style: none;
+
+                li {
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+}
+
+.navbar_container_active {
+    z-index: 100;
+    position: fixed;
     height: 70px;
     width: 100%;
     background-color: $color-black;
     color: $color-white;
+    transition: 0.9s;
+    opacity: 95%;
+
+    .navbar_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+
+        img {
+            cursor: pointer;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .navbar_menu {
+
+            ul {
+                display: flex;
+                column-gap: 1.2rem;
+                list-style: none;
+
+                li {
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .navbar_menu_mobile {
+
+            ul {
+                display: flex;
+                column-gap: 1.2rem;
+                list-style: none;
+
+                li {
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
 }
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 1112px) {
+
+    .hamburger {
+        display: block !important;
+    }
+
+    .navbar_content {
+        width: 90% !important;
+        margin: auto;
+    }
+
+    .navbar_menu {
+        display: none;
+    }
+
+    .navbar_menu_mobile {
+        display: none;
+        height: 350px;
+        background-color: $color-black;
+        width: 90%;
+        margin-top: 26.29rem ;
+        position: fixed;
+
+        ul {
+            height: 100%;
+            width: 90%;
+            margin: auto;
+            justify-content: center;
+            align-items: flex-end;
+            flex-direction: column;
+            row-gap: 3rem;
+        }
+
+    }
+
+    .hide_Mobile {
+        display: none;
+    }
+}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 767px) {}
