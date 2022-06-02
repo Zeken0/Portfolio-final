@@ -582,4 +582,130 @@
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .home_content {
+    row-gap: 2rem !important;
+
+    .top_section {
+
+      .left_content {
+  
+          h1 {
+            font-size: 2rem !important;
+          }
+  
+          span {
+            font-size: 2rem !important;
+          }
+        
+          .greeting {
+            span {
+              font-size: 1rem !important;
+            }
+          }
+      }
+  
+      .right_content {
+        flex-direction: column !important;
+
+        button {
+          width: 300px !important;
+        }
+      }
+    }
+  }
+
+  .about_content {
+
+    .top_section {
+      text-align: center;
+
+      span {
+        font-size: 1.1rem !important;
+      }
+
+      h2 {
+        font-size: 2.5rem !important;
+      }
+
+      h3 {
+        font-size: 1rem !important;
+      }
+    }
+
+    .bottom_section {
+
+      .left_content {
+
+        h4 {
+          font-size: 1.4rem !important;
+        }
+
+        p {
+          font-size: 0.95rem !important;
+        }
+      }
+
+      .right_content {
+        
+        h4 {
+          font-size: 1.4rem !important;
+        }
+
+        .skills_item {
+          font-size: 0.75rem !important;
+        }
+      }
+    }
+  }
+
+  .work_content {
+
+    .top_section {
+      text-align: center;
+
+      span {
+        font-size: 1.1rem !important;
+      }
+
+      h2 {
+        font-size: 2.5rem !important;
+      }
+
+      h3 {
+        font-size: 1rem !important;
+      }
+    }
+  }
+
+
+  .contact_content {
+    width: 90% !important;
+
+    .top_section {
+      width: 100% !important;
+      text-align: center;
+
+      span {
+        font-size: 1.1rem !important;
+      }
+
+      h2 {
+        font-size: 2.5rem !important;
+      }
+
+      h3 {
+        font-size: 1rem !important;
+      }
+    }
+
+    .bottom_section {
+      width: 100% !important;
+      margin: 0rem !important;
+      .right_content {
+        width: 100% !important;
+      }
+    }
+  }
+}
