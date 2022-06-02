@@ -60,7 +60,8 @@ export default function Home() {
       <Navbar />
       <main className={styles.main_section}>
         <section className={styles.home_container}>
-          {/* <div className={styles.home_overlay}></div> */}
+          <div className={styles.home_overlay}></div>
+          <div className={styles.home_shadow_overlay}></div>
           <div className={styles.home_content}>
             <div className={styles.top_section}>
               <div className={styles.left_content}>
