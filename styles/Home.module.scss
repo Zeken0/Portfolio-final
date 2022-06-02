@@ -292,17 +292,17 @@
             background-color: $color-white;
             height: 400px;
             width: 100%;
-            border: solid 1px red;
             display: flex;
             align-items: center;
             column-gap: 1rem;
 
             .project_image {
-              border: solid 1px violet;
               height: 100%;
               width: 100%;
 
               img {
+                height: 100%;
+                width: 100%;
                 cursor: pointer;
               }
             }
@@ -312,14 +312,14 @@
               flex-direction: column;
               justify-content: space-evenly;
               align-items: center;
-              border: solid 1px green;
               height: 100%;
-              width: 65%;
+              width: 60%;
               margin: auto;
 
               h4 {
                 margin: 0;
                 font-size: 1.6rem;
+                text-align: center;
               }
 
               p {
@@ -559,7 +559,22 @@
     .bottom_section {
       
       .project_container {
+        height: fit-content !important;
         flex-direction: column;
+        row-gap: 2rem;
+
+        .project_info {
+          width: 90% !important;
+          row-gap: 1.5rem;
+          margin-bottom: 2rem !important;
+
+          .project_buttons {
+            
+            button {
+              width: 10rem !important;
+            }
+          }
+        }
       }
     }
   }
@@ -677,6 +692,26 @@
         font-size: 1rem !important;
       }
     }
+
+    .bottom_section {
+
+      .project_container {
+
+        .project_info {
+
+          .project_buttons {
+                  
+            button {
+              margin-top: 2rem;
+              width: 6rem !important;
+            }
+          }
+        }
+        }
+  
+    }
+
+
   }
 
 

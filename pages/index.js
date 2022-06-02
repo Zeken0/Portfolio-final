@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -156,19 +155,16 @@ export default function Home() {
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
                   <Link href={"https://makers-studio.netlify.app/"}>
-                    <Image
-                      src={"/../public/images/makers-studio.JPG"}
-                      alt={""}
-                      layout={"responsive"}
-                      height={176}
-                      width={300}
+                    <img
+                      src="https://ahmedjjibril.netlify.app/img/makers-studio.JPG"
+                      alt="Image of the High Art site"
                     />
                   </Link>
                 </div>
                 <div className={styles.project_info}>
                   <h4>Maker´s studio</h4>
                   <p>
-                    Makers Studio is an e-commerce site where you can buy or
+                    Maker´s Studio is an e-commerce site where you can buy or
                     sell your own artwork on.
                   </p>
                   <div className={styles.skills_content}>
@@ -198,12 +194,9 @@ export default function Home() {
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
                   <Link href={"https://makers-studio.netlify.app/"}>
-                    <Image
-                      src={"/../public/images/highart.JPG"}
-                      alt={""}
-                      layout={"responsive"}
-                      height={176}
-                      width={300}
+                    <img
+                      src="https://ahmedjjibril.netlify.app/img/highart2.JPG"
+                      alt="Image of the High Art site"
                     />
                   </Link>
                 </div>
@@ -244,12 +237,9 @@ export default function Home() {
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
                   <Link href={"https://makers-studio.netlify.app/"}>
-                    <Image
-                      src={"/../public/images/tism2.JPG"}
-                      alt={""}
-                      layout={"responsive"}
-                      height={176}
-                      width={300}
+                    <img
+                      src="https://ahmedjjibril.netlify.app/img/tism2.JPG"
+                      alt="Image of the High Art site"
                     />
                   </Link>
                 </div>
