@@ -742,11 +742,11 @@
         .project_info {
 
           h4 {
-            font-size: 1.4rem !important;
+            font-size: 1.3rem !important;
           }
 
           p {
-            font-size: 1.05rem !important;
+            font-size: 0.95rem !important;
           }
 
           .skills_item {
@@ -757,8 +757,9 @@
             column-gap: 0.5rem !important;
 
             button {
+              border:  solid 3px !important;
               margin-top: 2rem;
-              width: 5.85rem !important;
+              width: 5.95rem !important;
             }
           }
         }
