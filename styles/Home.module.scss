@@ -3,6 +3,31 @@
 @import "_footer.module.scss";
 @import "_navBar.module.scss";
 
+.overlay {
+  z-index: 1;
+  position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.45;
+        background-color: #111111;
+}
+
+.shadow_overlay {
+  position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          rgba(0, 0, 0, 0.8) 100%
+        );
+}
+
 .main_container {
 
   .main_section {
@@ -10,13 +35,13 @@
     width: 100%;
 
     .home_container {
+      z-index: 90;
       height: 100vh;
       width: 100%;
       background-image: url("../public/images/hero-bg2.jpg");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
-      position: relative;
 
       .home_overlay {
         position: absolute;

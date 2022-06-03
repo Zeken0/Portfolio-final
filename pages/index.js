@@ -6,6 +6,9 @@ import Link from "next/link";
 import { ChevronDown } from "tabler-icons-react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Overlay from "../components/Overlay";
+import ShadowOverlay from "../components/ShadowOverlay";
+import Image from "next/image";
 
 export default function Home() {
   const {
@@ -55,13 +58,16 @@ export default function Home() {
     <div className={styles.main_container}>
       <Head>
         <title>Ahmed J. Jibril | Frontend-developer</title>
-        <meta name="description" content="G" />
+        <meta
+          name="description"
+          content="This is a portfolio website for the Frontend developer Ahmed J. Jibril"
+        />
       </Head>
       <Navbar />
       <main className={styles.main_section}>
         <section className={styles.home_container}>
-          <div className={styles.home_overlay}></div>
-          <div className={styles.home_shadow_overlay}></div>
+          <Overlay />
+          <ShadowOverlay />
           <div className={styles.home_content}>
             <div className={styles.top_section}>
               <div className={styles.left_content}>
@@ -287,7 +293,8 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.contact_container}>
-          <div className={styles.contact_overlay}></div>
+          <Overlay />
+          <ShadowOverlay />
           <div className={styles.contact_content}>
             <div className={styles.top_section}>
               <span>CONTACT</span>
