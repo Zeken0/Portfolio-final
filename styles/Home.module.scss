@@ -741,11 +741,24 @@
 
         .project_info {
 
+          h4 {
+            font-size: 1.4rem !important;
+          }
+
+          p {
+            font-size: 1.05rem !important;
+          }
+
+          .skills_item {
+            font-size: 11px !important;
+          }
+
           .project_buttons {
-                  
+            column-gap: 0.5rem !important;
+
             button {
               margin-top: 2rem;
-              width: 6rem !important;
+              width: 5.85rem !important;
             }
           }
         }
