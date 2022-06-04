@@ -11,7 +11,7 @@ function Navbar() {
   const title = opened ? "Close navigation" : "Open navigation";
 
   const changeBackground = () => {
-    if (window.scrollY >= 70) {
+    if (window.scrollY >= 10) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -55,11 +55,13 @@ function Navbar() {
         </div>
         <div className={styles.navbar_menu}>
           <ul>
-            <Link href={"/"}>
+            <Link href="/">
               <li>Home</li>
             </Link>
-            <Link href={"/#about_container"}>
-              <li>About</li>
+            <Link href="/#about_container">
+              <a>
+                <li>About</li>
+              </a>
             </Link>
             <Link href={"/#work_container"}>
               <li>Work</li>
