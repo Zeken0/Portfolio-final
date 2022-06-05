@@ -1,10 +1,9 @@
-import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.scss";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+import styles from "../styles/Home.module.scss";
+import Footer from "../components/Footer";
 import { ChevronDown } from "tabler-icons-react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -15,6 +14,7 @@ import { Burger } from "@mantine/core";
 
 export default function Home() {
   const [navbar, setNavbar] = useState(false);
+  const [section, setSectionActive] = useState(false);
   const [opened, setOpened] = useState(false);
   const title = opened ? "Close navigation" : "Open navigation";
   const home = useRef(null);
@@ -22,10 +22,15 @@ export default function Home() {
   const work = useRef(null);
   const contact = useRef(null);
 
-  const scrollToSection = (elementrRef) => {
+  const scrollToSection = (elementRef) => {
     window.scrollTo({
-      top: elementrRef.current.offsetTop,
+      top: elementRef.current.offsetTop,
     });
+    if (elementRef.current.Height >= 1) {
+      setSectionActive(true)
+    } else {
+      setSectionActive(false)
+    }
   };
 
   const changeBackground = () => {
@@ -37,10 +42,6 @@ export default function Home() {
   };
 
   useEffect(function onFirstMount() {
-    function onScroll() {
-      console.log("scroll!");
-    }
-
     window.addEventListener("scroll", changeBackground);
 
     return () => {
@@ -100,7 +101,6 @@ export default function Home() {
           content="This is a portfolio website for the Frontend developer Ahmed J. Jibril"
         />
       </Head>
-
       <nav
         className={
         navbar ? styles.navbar_container_active : styles.navbar_container}>
@@ -117,20 +117,20 @@ export default function Home() {
           <div className={styles.hamburger}>
             <Burger
               opened={opened}
-              onClick={() => setOpened((o) => !o)}
+              onClick={() => {setOpened((o) => !o)}}
               title={title}
               color="#ffff"
             />
           </div>
           <div className={styles.navbar_menu}>
             <ul>
-                <li onClick={() => scrollToSection(home)}>Home</li>
-                <li onClick={() => scrollToSection(about)}>About</li>
-                <li onClick={() => scrollToSection(work)}>Work</li>
-                <li onClick={() => scrollToSection(contact)}>Contact</li>
+                <li className={section ? styles.section_default : styles.section_active} onClick={() => scrollToSection(home)}>Home</li>
+                <li className={section ? styles.section_default : styles.section_active} onClick={() => scrollToSection(about)}>About</li>
+                <li className={section ? styles.section_default : styles.section_active} onClick={() => scrollToSection(work)}>Work</li>
+                <li className={section ? styles.section_default : styles.section_active} onClick={() => scrollToSection(contact)}>Contact</li>
             </ul>
           </div>
-          <div className={styles.navbar_menu_mobile}>
+          <div className={opened ? styles.navbar_menu_mobile : styles.hide_Mobile}>
             <ul>
                 <li onClick={() => scrollToSection(home)}>Home</li>
                 <li onClick={() => scrollToSection(about)}>About</li>
@@ -224,7 +224,7 @@ export default function Home() {
             <div className={styles.bottom_section}>
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
-                  <Link href={"https://makers-studio.netlify.app/"}>
+                  <Link href={"https://makers-studio.netlify.app/"} target="_blank">
                     <img
                       src="https://ahmedjjibril.netlify.app/img/makers-studio.JPG"
                       alt="Image of the High Art site"
@@ -252,10 +252,10 @@ export default function Home() {
                     <Link href={""}>
                       <button>DESIGN</button>
                     </Link>
-                    <Link href={"https://makers-studio.netlify.app/"}>
+                    <Link href={"https://makers-studio.netlify.app/"} target="_blank">
                       <button>LIVE SITE</button>
                     </Link>
-                    <Link href={"https://github.com/Zeken0/Makers-Studio"}>
+                    <Link href={"https://github.com/Zeken0/Makers-Studio"} target="_blank">
                       <button>CODE</button>
                     </Link>
                   </div>
@@ -263,7 +263,7 @@ export default function Home() {
               </div>
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
-                  <Link href={"https://makers-studio.netlify.app/"}>
+                  <Link href={"https://makers-studio.netlify.app/"} target="_blank">
                     <img
                       src="https://ahmedjjibril.netlify.app/img/highart2.JPG"
                       alt="Image of the High Art site"
@@ -292,13 +292,14 @@ export default function Home() {
                       href={
                         "https://xd.adobe.com/view/5bfb59d4-f438-46ee-997d-5722c7aa7068-0ea8/"
                       }
+                      target="_blank"
                     >
                       <button>DESIGN</button>
                     </Link>
-                    <Link href={"https://high-art.netlify.app/"}>
+                    <Link href={"https://high-art.netlify.app/"} target="_blank">
                       <button>LIVE SITE</button>
                     </Link>
-                    <Link href={"https://github.com/Zeken0/HighArt"}>
+                    <Link href={"https://github.com/Zeken0/HighArt"} target="_blank">
                       <button>CODE</button>
                     </Link>
                   </div>
@@ -306,7 +307,7 @@ export default function Home() {
               </div>
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
-                  <Link href={"https://makers-studio.netlify.app/"}>
+                  <Link href={"https://makers-studio.netlify.app/"} target="_blank">
                     <img
                       src="https://ahmedjjibril.netlify.app/img/tism2.JPG"
                       alt="Image of the High Art site"
@@ -332,6 +333,7 @@ export default function Home() {
                       href={
                         "https://xd.adobe.com/view/39045b06-2d8b-4833-9c3f-f265b6476211-6c57/screen/044d0ef7-5786-4b32-bdc5-16896607b15a/"
                       }
+                      target="_blank"
                     >
                       <button>DESIGN</button>
                     </Link>
@@ -339,6 +341,7 @@ export default function Home() {
                       href={
                         "https://the-interactive-science-museum.netlify.app/"
                       }
+                      target="_blank"
                     >
                       <button>LIVE SITE</button>
                     </Link>
@@ -346,6 +349,7 @@ export default function Home() {
                       href={
                         "https://github.com/Zeken0/The-Interactive-Science-Museum"
                       }
+                      target="_blank"
                     >
                       <button>CODE</button>
                     </Link>
