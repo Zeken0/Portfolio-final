@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +9,15 @@ function Navbar() {
   const [opened, setOpened] = useState(false);
   const [mobile, setMobile] = useState(false);
   const title = opened ? "Close navigation" : "Open navigation";
+  const about = useRef(null);
+  const work = useRef(null);
+  const contact = useRef(null);
+
+  const scrollToSection = (elementrRef) => {
+    window.scrollTo({
+      top: elementrRef.current.offsetTop,
+    });
+  };
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -58,16 +67,14 @@ function Navbar() {
             <Link href="/">
               <li>Home</li>
             </Link>
-            <Link href="/#about_container">
-              <a>
-                <li>About</li>
-              </a>
+            <Link href={about}>
+              <li onClick={() => scrollToSection(about)}>About</li>
             </Link>
-            <Link href={"/#work_container"}>
-              <li>Work</li>
+            <Link href={work}>
+              <li onClick={() => scrollToSection(work)}>Work</li>
             </Link>
-            <Link href={"/#contact_container"}>
-              <li>Contact</li>
+            <Link href={contact}>
+              <li onClick={() => scrollToSection(contact)}>Contact</li>
             </Link>
           </ul>
         </div>

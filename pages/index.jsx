@@ -1,4 +1,6 @@
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
+import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -8,9 +10,44 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Overlay from "../components/Overlay";
 import ShadowOverlay from "../components/ShadowOverlay";
-import Image from "next/image";
+import { Burger } from "@mantine/core";
+
 
 export default function Home() {
+  const [navbar, setNavbar] = useState(false);
+  const [opened, setOpened] = useState(false);
+  const title = opened ? "Close navigation" : "Open navigation";
+  const home = useRef(null);
+  const about = useRef(null);
+  const work = useRef(null);
+  const contact = useRef(null);
+
+  const scrollToSection = (elementrRef) => {
+    window.scrollTo({
+      top: elementrRef.current.offsetTop,
+    });
+  };
+
+  const changeBackground = () => {
+    if (window.scrollY >= 10) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(function onFirstMount() {
+    function onScroll() {
+      console.log("scroll!");
+    }
+
+    window.addEventListener("scroll", changeBackground);
+
+    return () => {
+      window.removeEventListener("scroll", changeBackground);
+    };
+  }, []);
+
   const {
     handleSubmit,
     handleChange,
@@ -63,9 +100,48 @@ export default function Home() {
           content="This is a portfolio website for the Frontend developer Ahmed J. Jibril"
         />
       </Head>
-      <Navbar />
+
+      <nav
+        className={
+        navbar ? styles.navbar_container_active : styles.navbar_container}>
+          
+        <div className={styles.navbar_content}>
+          <Link href={"/"}>
+            <Image
+              src={"/../public/images/logo.jpg"}
+              alt="logo"
+              height={70}
+              width={70}
+            />
+          </Link>
+          <div className={styles.hamburger}>
+            <Burger
+              opened={opened}
+              onClick={() => setOpened((o) => !o)}
+              title={title}
+              color="#ffff"
+            />
+          </div>
+          <div className={styles.navbar_menu}>
+            <ul>
+                <li onClick={() => scrollToSection(home)}>Home</li>
+                <li onClick={() => scrollToSection(about)}>About</li>
+                <li onClick={() => scrollToSection(work)}>Work</li>
+                <li onClick={() => scrollToSection(contact)}>Contact</li>
+            </ul>
+          </div>
+          <div className={styles.navbar_menu_mobile}>
+            <ul>
+                <li onClick={() => scrollToSection(home)}>Home</li>
+                <li onClick={() => scrollToSection(about)}>About</li>
+                <li onClick={() => scrollToSection(work)}>Work</li>
+                <li onClick={() => scrollToSection(contact)}>Contact</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <main className={styles.main_section}>
-        <section className={styles.home_container}>
+        <section ref={home} className={styles.home_container}>
           <Overlay />
           <ShadowOverlay />
           <div className={styles.home_content}>
@@ -79,31 +155,18 @@ export default function Home() {
                 <span>I am a Frontend Developer</span>
               </div>
               <div className={styles.right_content}>
-                <Link href={"/#about_container"}>
-                  <a>
-                    <button>MORE ABOUT ME</button>
-                  </a>
-                </Link>
-
-                <Link href={"/#work_container"}>
-                  <a>
-                    <button>LATEST PROJECTS</button>
-                  </a>
-                </Link>
+                    <button onClick={() => scrollToSection(about)}>MORE ABOUT ME</button>
+                    <button onClick={() => scrollToSection(work)}>LATEST PROJECTS</button>                
               </div>
             </div>
             <div className={styles.bottom_section}>
-              <Link href={"/#about_container"}>
-                <a>
-                  <span>
+                  <span onClick={() => scrollToSection(about)}>
                     SCROLL DOWN <ChevronDown />
                   </span>
-                </a>
-              </Link>
             </div>
           </div>
         </section>
-        <section className={styles.about_container}>
+        <section ref={about} className={styles.about_container}>
           <div className={styles.about_content}>
             <div className={styles.top_section}>
               <span>ABOUT</span>
@@ -147,7 +210,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={styles.work_container}>
+        <section ref={work} className={styles.work_container}>
           <div className={styles.work_content}>
             <div className={styles.top_section}>
               <span>WORK</span>
@@ -292,7 +355,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={styles.contact_container}>
+        <section ref={contact} className={styles.contact_container}>
           <Overlay />
           <ShadowOverlay />
           <div className={styles.contact_content}>
