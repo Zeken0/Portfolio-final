@@ -96,16 +96,17 @@
     }
 
     .navbar_menu_mobile {
+        right: 0;
         display: flex !important;
         height: 350px;
         background-color: $color-black;
-        width: 90%;
-        margin-top: 26.29rem ;
+        width: 100%;
+        margin-top: 26.205rem ;
         position: fixed;
 
         ul {
             height: 100%;
-            width: 90%;
+            width: 88%;
             margin: auto;
             justify-content: center;
             align-items: flex-end;
