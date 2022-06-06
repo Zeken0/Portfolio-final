@@ -124,10 +124,10 @@ export default function Home() {
           </div>
           <div className={styles.navbar_menu}>
             <ul>
-                <li className={section ? styles.section_default : styles.section_active} onClick={() => scrollToSection(home)}>Home</li>
-                <li className={section ? styles.section_default : styles.section_active} onClick={() => scrollToSection(about)}>About</li>
-                <li className={section ? styles.section_default : styles.section_active} onClick={() => scrollToSection(work)}>Work</li>
-                <li className={section ? styles.section_default : styles.section_active} onClick={() => scrollToSection(contact)}>Contact</li>
+                <li  onClick={() => scrollToSection(home)}>Home</li>
+                <li  onClick={() => scrollToSection(about)}>About</li>
+                <li  onClick={() => scrollToSection(work)}>Work</li>
+                <li  onClick={() => scrollToSection(contact)}>Contact</li>
             </ul>
           </div>
           <div className={opened ? styles.navbar_menu_mobile : styles.hide_Mobile}>
