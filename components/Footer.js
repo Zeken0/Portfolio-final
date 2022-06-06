@@ -9,7 +9,7 @@ export default function Footer() {
       <main>
         <Link href={"/"}>
           <Image
-            src={"/../public/images/logo.jpg"}
+            src={"https://ahmedjjibril.netlify.app/img/logo.jpg"}
             alt={"this is an image of the logo of the site"}
             height={170}
             width={170}
