@@ -7,8 +7,6 @@ import Footer from "../components/Footer";
 import { ChevronDown } from "tabler-icons-react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import Overlay from "../components/Overlay";
-import ShadowOverlay from "../components/ShadowOverlay";
 import { Burger } from "@mantine/core";
 
 
@@ -142,8 +140,7 @@ export default function Home() {
       </nav>
       <main className={styles.main_section}>
         <section ref={home} className={styles.home_container}>
-          <Overlay />
-          <ShadowOverlay />
+          
           <div className={styles.home_content}>
             <div className={styles.top_section}>
               <div className={styles.left_content}>
@@ -360,8 +357,6 @@ export default function Home() {
           </div>
         </section>
         <section ref={contact} className={styles.contact_container}>
-          <Overlay />
-          <ShadowOverlay />
           <div className={styles.contact_content}>
             <div className={styles.top_section}>
               <span>CONTACT</span>
