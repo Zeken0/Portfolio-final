@@ -22,13 +22,35 @@ export default function Home() {
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
-      top: elementRef.current.offsetTop,
+      top: elementRef.current.offsetTop - 68,
     });
-    if (elementRef.current.Height >= 1) {
+    console.log("offsetTop:", elementRef.current.offsetTop);
+    console.log("offsetHeight:",elementRef.current.offsetHeight);
+    if (elementRef.current.offsetTop === 0 && elementRef.current.offsetHeight <= 698 ) {
       setSectionActive(true)
     } else {
       setSectionActive(false)
     }
+
+    if (elementRef.current.offsetTop === 698 && elementRef.current.offsetHeight <= 645 ) {
+      setSectionActive(true)
+    } else {
+      setSectionActive(false)
+    }
+
+    if (elementRef.current.offsetTop === 1343 && elementRef.current.offsetHeight <= 1676 ) {
+      setSectionActive(true)
+    } else {
+      setSectionActive(false)
+    }
+
+    if (elementRef.current.offsetTop === 3019 && elementRef.current.offsetHeight <= 1047 ) {
+      setSectionActive(true)
+    } else {
+      setSectionActive(false)
+    }
+
+  
   };
 
   const changeBackground = () => {
