@@ -282,7 +282,7 @@ export default function Home() {
               </div>
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
-                  <Link href={"https://makers-studio.netlify.app/"} target="_blank">
+                  <Link href={"https://high-art.netlify.app/"} target="_blank">
                     <img
                       src="https://ahmedjjibril.netlify.app/img/highart2.JPG"
                       alt="Image of the High Art site"
@@ -326,7 +326,7 @@ export default function Home() {
               </div>
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
-                  <Link href={"https://makers-studio.netlify.app/"} target="_blank">
+                  <Link href={"https://the-interactive-science-museum.netlify.app/"} target="_blank">
                     <img
                       src="https://ahmedjjibril.netlify.app/img/tism2.JPG"
                       alt="Image of the High Art site"
