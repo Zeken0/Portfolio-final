@@ -44,7 +44,7 @@ export default function Home() {
       setSectionActive(false)
     }
 
-    if (elementRef.current.offsetTop === 3019 && elementRef.current.offsetHeight <= 1047 ) {
+    if (elementRef.current.offsetTop === 3019 && elementRef.current.offsetHeight <= 1046 ) {
       setSectionActive(true)
     } else {
       setSectionActive(false)
