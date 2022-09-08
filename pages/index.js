@@ -9,7 +9,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Burger } from "@mantine/core";
 
-
 export default function Home() {
   const [navbar, setNavbar] = useState(false);
   const [section, setSectionActive] = useState(false);
@@ -25,7 +24,7 @@ export default function Home() {
       top: elementRef.current.offsetTop - 68,
     });
     console.log("offsetTop:", elementRef.current.offsetTop);
-    console.log("offsetHeight:",elementRef.current.offsetHeight);
+    console.log("offsetHeight:", elementRef.current.offsetHeight);
     // if (elementRef.current.offsetTop === 0 && elementRef.current.offsetHeight <= 698 ) {
     //   setSectionActive(true)
     // } else {
@@ -49,8 +48,6 @@ export default function Home() {
     // } else {
     //   setSectionActive(false)
     // }
-
-  
   };
 
   const changeBackground = () => {
@@ -123,12 +120,13 @@ export default function Home() {
       </Head>
       <nav
         className={
-        navbar ? styles.navbar_container_active : styles.navbar_container}>
-          
+          navbar ? styles.navbar_container_active : styles.navbar_container
+        }
+      >
         <div className={styles.navbar_content}>
           <Link href={"/"}>
             <Image
-              src={"https://ahmedjjibril.netlify.app/img/logo.jpg"}
+              src={"/../public/images/logo.jpg"}
               alt="logo"
               height={70}
               width={70}
@@ -137,32 +135,35 @@ export default function Home() {
           <div className={styles.hamburger}>
             <Burger
               opened={opened}
-              onClick={() => {setOpened((o) => !o)}}
+              onClick={() => {
+                setOpened((o) => !o);
+              }}
               title={title}
               color="#ffff"
             />
           </div>
           <div className={styles.navbar_menu}>
             <ul>
-                <li  onClick={() => scrollToSection(home)}>Home</li>
-                <li  onClick={() => scrollToSection(about)}>About</li>
-                <li  onClick={() => scrollToSection(work)}>Work</li>
-                <li  onClick={() => scrollToSection(contact)}>Contact</li>
+              <li onClick={() => scrollToSection(home)}>Home</li>
+              <li onClick={() => scrollToSection(about)}>About</li>
+              <li onClick={() => scrollToSection(work)}>Work</li>
+              <li onClick={() => scrollToSection(contact)}>Contact</li>
             </ul>
           </div>
-          <div className={opened ? styles.navbar_menu_mobile : styles.hide_Mobile}>
+          <div
+            className={opened ? styles.navbar_menu_mobile : styles.hide_Mobile}
+          >
             <ul>
-                <li onClick={() => scrollToSection(home)}>Home</li>
-                <li onClick={() => scrollToSection(about)}>About</li>
-                <li onClick={() => scrollToSection(work)}>Work</li>
-                <li onClick={() => scrollToSection(contact)}>Contact</li>
+              <li onClick={() => scrollToSection(home)}>Home</li>
+              <li onClick={() => scrollToSection(about)}>About</li>
+              <li onClick={() => scrollToSection(work)}>Work</li>
+              <li onClick={() => scrollToSection(contact)}>Contact</li>
             </ul>
           </div>
         </div>
       </nav>
       <main className={styles.main_section}>
         <section ref={home} className={styles.home_container}>
-          
           <div className={styles.home_content}>
             <div className={styles.top_section}>
               <div className={styles.left_content}>
@@ -174,14 +175,18 @@ export default function Home() {
                 <span>I am a Frontend Developer</span>
               </div>
               <div className={styles.right_content}>
-                    <button onClick={() => scrollToSection(about)}>MORE ABOUT ME</button>
-                    <button onClick={() => scrollToSection(work)}>LATEST PROJECTS</button>                
+                <button onClick={() => scrollToSection(about)}>
+                  MORE ABOUT ME
+                </button>
+                <button onClick={() => scrollToSection(work)}>
+                  LATEST PROJECTS
+                </button>
               </div>
             </div>
             <div className={styles.bottom_section}>
-                  <span onClick={() => scrollToSection(about)}>
-                    SCROLL DOWN <ChevronDown />
-                  </span>
+              <span onClick={() => scrollToSection(about)}>
+                SCROLL DOWN <ChevronDown />
+              </span>
             </div>
           </div>
         </section>
@@ -243,7 +248,10 @@ export default function Home() {
             <div className={styles.bottom_section}>
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
-                  <Link href={"https://makers-studio.netlify.app/"} target="_blank">
+                  <Link
+                    href={"https://makers-studio.netlify.app/"}
+                    target="_blank"
+                  >
                     <img
                       src="https://ahmedjjibril.netlify.app/img/makers-studio.JPG"
                       alt="Image of the High Art site"
@@ -271,10 +279,16 @@ export default function Home() {
                     <Link href={""}>
                       <button>DESIGN</button>
                     </Link>
-                    <Link href={"https://makers-studio.netlify.app/"} target="_blank">
+                    <Link
+                      href={"https://makers-studio.netlify.app/"}
+                      target="_blank"
+                    >
                       <button>LIVE SITE</button>
                     </Link>
-                    <Link href={"https://github.com/Zeken0/Makers-Studio"} target="_blank">
+                    <Link
+                      href={"https://github.com/Zeken0/Makers-Studio"}
+                      target="_blank"
+                    >
                       <button>CODE</button>
                     </Link>
                   </div>
@@ -315,10 +329,16 @@ export default function Home() {
                     >
                       <button>DESIGN</button>
                     </Link>
-                    <Link href={"https://high-art.netlify.app/"} target="_blank">
+                    <Link
+                      href={"https://high-art.netlify.app/"}
+                      target="_blank"
+                    >
                       <button>LIVE SITE</button>
                     </Link>
-                    <Link href={"https://github.com/Zeken0/HighArt"} target="_blank">
+                    <Link
+                      href={"https://github.com/Zeken0/HighArt"}
+                      target="_blank"
+                    >
                       <button>CODE</button>
                     </Link>
                   </div>
@@ -326,7 +346,10 @@ export default function Home() {
               </div>
               <div className={styles.project_container}>
                 <div className={styles.project_image}>
-                  <Link href={"https://the-interactive-science-museum.netlify.app/"} target="_blank">
+                  <Link
+                    href={"https://the-interactive-science-museum.netlify.app/"}
+                    target="_blank"
+                  >
                     <img
                       src="https://ahmedjjibril.netlify.app/img/tism2.JPG"
                       alt="Image of the High Art site"
