@@ -126,7 +126,7 @@ export default function Home() {
         <div className={styles.navbar_content}>
           <Link href={"/"}>
             <Image
-              src={"/../public/images/logo.jpg"}
+              src={"https://ahmedjjibril.netlify.app/img/logo.jpg"}
               alt="logo"
               height={70}
               width={70}
