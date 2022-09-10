@@ -25,6 +25,7 @@ export default function Home() {
     });
     console.log("offsetTop:", elementRef.current.offsetTop);
     console.log("offsetHeight:", elementRef.current.offsetHeight);
+
     // if (elementRef.current.offsetTop === 0 && elementRef.current.offsetHeight <= 698 ) {
     //   setSectionActive(true)
     // } else {
