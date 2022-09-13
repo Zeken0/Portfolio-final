@@ -12,6 +12,9 @@ import { Burger } from "@mantine/core";
 export default function Home() {
   const [navbar, setNavbar] = useState(false);
   const [section, setSectionActive] = useState(false);
+  const [sectionTwo, setSectionTwoActive] = useState(false);
+  const [sectionThree, setSectionThreeActive] = useState(false);
+  const [sectionFour, setSectionFourActive] = useState(false);
   const [opened, setOpened] = useState(false);
   const title = opened ? "Close navigation" : "Open navigation";
   const home = useRef(null);
@@ -26,29 +29,41 @@ export default function Home() {
     console.log("offsetTop:", elementRef.current.offsetTop);
     console.log("offsetHeight:", elementRef.current.offsetHeight);
 
-    // if (elementRef.current.offsetTop === 0 && elementRef.current.offsetHeight <= 698 ) {
-    //   setSectionActive(true)
-    // } else {
-    //   setSectionActive(false)
-    // }
+    if (
+      elementRef.current.offsetTop === 0 &&
+      elementRef.current.offsetHeight <= 698
+    ) {
+      setSectionActive(true);
+    } else {
+      setSectionActive(true);
+    }
 
-    // if (elementRef.current.offsetTop === 698 && elementRef.current.offsetHeight <= 645 ) {
-    //   setSectionActive(true)
-    // } else {
-    //   setSectionActive(false)
-    // }
+    if (
+      elementRef.current.offsetTop === 698 &&
+      elementRef.current.offsetHeight <= 645
+    ) {
+      setSectionTwoActive(true);
+    } else {
+      setSectionTwoActive(false);
+    }
 
-    // if (elementRef.current.offsetTop === 1343 && elementRef.current.offsetHeight <= 1676 ) {
-    //   setSectionActive(true)
-    // } else {
-    //   setSectionActive(false)
-    // }
+    if (
+      elementRef.current.offsetTop === 1343 &&
+      elementRef.current.offsetHeight <= 1676
+    ) {
+      setSectionThreeActive(true);
+    } else {
+      setSectionThreeActive(false);
+    }
 
-    // if (elementRef.current.offsetTop === 3019 && elementRef.current.offsetHeight <= 1046 ) {
-    //   setSectionActive(true)
-    // } else {
-    //   setSectionActive(false)
-    // }
+    if (
+      elementRef.current.offsetTop === 3019 &&
+      elementRef.current.offsetHeight <= 1046
+    ) {
+      setSectionFourActive(true);
+    } else {
+      setSectionFourActive(false);
+    }
   };
 
   const changeBackground = () => {
@@ -145,10 +160,38 @@ export default function Home() {
           </div>
           <div className={styles.navbar_menu}>
             <ul>
-              <li onClick={() => scrollToSection(home)}>Home</li>
-              <li onClick={() => scrollToSection(about)}>About</li>
-              <li onClick={() => scrollToSection(work)}>Work</li>
-              <li onClick={() => scrollToSection(contact)}>Contact</li>
+              <li
+                className={
+                  section ? styles.section_active : styles.section_default
+                }
+                onClick={() => scrollToSection(home)}
+              >
+                Home
+              </li>
+              <li
+                className={
+                  sectionTwo ? styles.section_active : styles.section_default
+                }
+                onClick={() => scrollToSection(about)}
+              >
+                About
+              </li>
+              <li
+                className={
+                  sectionThree ? styles.section_active : styles.section_default
+                }
+                onClick={() => scrollToSection(work)}
+              >
+                Work
+              </li>
+              <li
+                className={
+                  sectionFour ? styles.section_active : styles.section_default
+                }
+                onClick={() => scrollToSection(contact)}
+              >
+                Contact
+              </li>
             </ul>
           </div>
           <div
