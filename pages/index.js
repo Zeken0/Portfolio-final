@@ -12,9 +12,6 @@ import { Burger } from "@mantine/core";
 export default function Home() {
   const [navbar, setNavbar] = useState(false);
   const [section, setSectionActive] = useState(false);
-  const [sectionTwo, setSectionTwoActive] = useState(false);
-  const [sectionThree, setSectionThreeActive] = useState(false);
-  const [sectionFour, setSectionFourActive] = useState(false);
   const [opened, setOpened] = useState(false);
   const title = opened ? "Close navigation" : "Open navigation";
   const home = useRef(null);
@@ -30,11 +27,9 @@ export default function Home() {
     console.log("offsetHeight:", elementRef.current.offsetHeight);
 
     if (
-      elementRef.current.offsetTop === 0 &&
+      elementRef.current.offsetTop === 1 &&
       elementRef.current.offsetHeight <= 698
     ) {
-      setSectionActive(true);
-    } else {
       setSectionActive(true);
     }
 
@@ -42,27 +37,21 @@ export default function Home() {
       elementRef.current.offsetTop === 698 &&
       elementRef.current.offsetHeight <= 645
     ) {
-      setSectionTwoActive(true);
-    } else {
-      setSectionTwoActive(false);
+      setSectionActive(true);
     }
 
     if (
       elementRef.current.offsetTop === 1343 &&
       elementRef.current.offsetHeight <= 1676
     ) {
-      setSectionThreeActive(true);
-    } else {
-      setSectionThreeActive(false);
+      setSectionActive(true);
     }
 
     if (
       elementRef.current.offsetTop === 3019 &&
       elementRef.current.offsetHeight <= 1046
     ) {
-      setSectionFourActive(true);
-    } else {
-      setSectionFourActive(false);
+      setSectionActive(true);
     }
   };
 
@@ -170,7 +159,7 @@ export default function Home() {
               </li>
               <li
                 className={
-                  sectionTwo ? styles.section_active : styles.section_default
+                  section ? styles.section_active : styles.section_default
                 }
                 onClick={() => scrollToSection(about)}
               >
@@ -178,7 +167,7 @@ export default function Home() {
               </li>
               <li
                 className={
-                  sectionThree ? styles.section_active : styles.section_default
+                  section ? styles.section_active : styles.section_default
                 }
                 onClick={() => scrollToSection(work)}
               >
@@ -186,7 +175,7 @@ export default function Home() {
               </li>
               <li
                 className={
-                  sectionFour ? styles.section_active : styles.section_default
+                  section ? styles.section_active : styles.section_default
                 }
                 onClick={() => scrollToSection(contact)}
               >
