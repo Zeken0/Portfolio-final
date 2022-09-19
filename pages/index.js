@@ -238,9 +238,7 @@ export default function Home() {
                   My name is Ahmed Jamal Jibril and I´m a passionate Frontend
                   Developer using web technologies to build amazing products and
                   focusing on solving problems for different niches and
-                  different industries using the power of technology. Would love
-                  to hear from you. Whether it´s a project, job opportunity, or
-                  just a chat. Feel free to contact me!
+                  different industries using the power of technology.
                 </p>
               </div>
               <div className={styles.right_content}>
