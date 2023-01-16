@@ -249,6 +249,7 @@ export default function Home() {
                   <div className={styles.skills_item}>JAVASCRIPT</div>
                   <div className={styles.skills_item}>TYPESCRIPT</div>
                   <div className={styles.skills_item}>REACT</div>
+                  <div className={styles.skills_item}>REACT NATIVE</div>
                   <div className={styles.skills_item}>NEXT.JS</div>
                   <div className={styles.skills_item}>SASS</div>
                   <div className={styles.skills_item}>RESPONSIVE DESIGN</div>
