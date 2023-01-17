@@ -259,6 +259,7 @@ export default function Home() {
                   <div className={styles.skills_item}>GITHUB</div>
                   <div className={styles.skills_item}>NETLIFY</div>
                   <div className={styles.skills_item}>STRAPI</div>
+                  <div className={styles.skills_item}>RENDER</div>
                   <div className={styles.skills_item}>HEROKU</div>
                   <div className={styles.skills_item}>WORDPRESS</div>
                 </div>
@@ -305,7 +306,7 @@ export default function Home() {
                     <div className={styles.skills_item}>BOOTSTRAP</div>
                     <div className={styles.skills_item}>NETLIFY</div>
                     <div className={styles.skills_item}>STRAPI</div>
-                    <div className={styles.skills_item}>HEROKU</div>
+                    <div className={styles.skills_item}>RENDER</div>
                   </div>
                   <div className={styles.project_buttons}>
                     <Link href={""}>
@@ -350,7 +351,7 @@ export default function Home() {
                     <div className={styles.skills_item}>JQUERY</div>
                     <div className={styles.skills_item}>NETLIFY</div>
                     <div className={styles.skills_item}>STRAPI</div>
-                    <div className={styles.skills_item}>HEROKU</div>
+                    <div className={styles.skills_item}>RENDER</div>
                   </div>
                   <div className={styles.project_buttons}>
                     <Link
@@ -515,7 +516,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h5>ADDRESS</h5>
-                  <p>Asker, Norway</p>
+                  <p>Sandvika, Norway</p>
                 </div>
               </div>
             </div>
